@@ -164,7 +164,7 @@ Finally install Rust & Cargo:
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-> Press 1 when asked during installation
+> Press 1 when asked during installation.
 
 And source the environment at the end:
 
@@ -180,7 +180,7 @@ cd ~/nearcore
 git fetch
 git checkout <commit>
 ```
-> You can always find the current version of commit number in [this file](https://github.com/near/stakewars-iii/blob/main/commit.md) 
+> You can always find the current version of commit number in [this file](https://github.com/near/stakewars-iii/blob/main/commit.md).
 
 And compile `nearcore` binary:
 
@@ -238,7 +238,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable neard
 sudo systemctl start neard
 ```
-> Make sure to update <USER_ID> accordingly
+> Make sure to update <USER_ID> accordingly.
 
 To see logs for your node you should run:
 
@@ -421,7 +421,6 @@ near call $POOLID.factory.shardnet.near ping '{}' --accountId $ACCOUNTID.shardne
 near proposals | grep $POOLID >> $LOGS/all.log
 near validators current | grep $POOLID >> $LOGS/all.log
 near validators next | grep $POOLID >> $LOGS/all.log
-EOF
 ```
 
 > Make sure to replace <USER_ID>, <YOUR_POOL_ID> and <YOUR_ACCOUNT_ID> accordingly.
@@ -430,7 +429,7 @@ And then create crontab job which is going to be running that script:
 
 ```
 crontab -e
-*/5 * * * * sh /home/<USER_ID>/scripts/ping.sh
+0 */2 * * * sh /home/<USER_ID>/scripts/ping.sh
 ```
 
 You can check if job was created by reviewing a user's crontab:
